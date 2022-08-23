@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <style>
+      .container-modal{
+        position: relative;
+width: 100%;
+max-width: 600px;
+height: auto;
+display: flex;
+background: #ffffff;
+box-shadow: 0 0 5px #999999;
+      }
+      .wrapper-login{
+margin: 0 auto;
+width: 100%;
+max-width: 1140px;
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+.login .col-left,
+.login .col-right{
+padding: 30px;
+display: flex;
+}
+.login .col-left{
+width: 60%;
+clip-path: polygon(0 0, 0% 100%, 100% 0 );
+background: #FF5D5D;
+}
+.login .col-right{
+padding: 60px 30px;
+width: 50%;
+margin-left: -10%;
+}
+@media(max-width: 575px){
+.login .container{
+    flex-direction: column;
+    box-shadow: none;
+}
+.login .col-left,
+.login .col-right{
+ width: 100%;
+ margin: 0;
+ clip-path: none;
+}
+.login .col-right{
+    padding: 30px;
+}
+}
+.login .login-text{
+position: relative;
+width: 100%;
+color: #ffffff;
+}
+.login .login-text h2{
+margin: 0 0 15px 0;
+font-size: 30px;
+font-weight: 700;
+}
+.login .login-text p{
+margin: 0 0 20px 0;
+font-size: 16px;
+font-weight: 500;
+line-height: 22px;
+}
+
+.login .login-text .btn{
+display: inline-block;
+font-family: poppins;
+padding: 7px 20px;
+font-size: 16px;
+letter-spacing: 1px;
+text-decoration: none;
+border-radius: 30px;
+color: #ffffff;
+outline: none;
+border: 1px solid #ffffff;
+box-shadow: inset 0 0 0 0 #ffffff;
+transition: .3s;
+}
+.login .login-text .btn:hover{
+color: #FF5D5D;
+box-shadow: inset 150px 0 0 0  #ffffff;
+}
+.login .login-form{
+position: relative;
+width: 100%;
+}
+.login .login-form h2{
+margin: 0 0 15px 0;
+font-size: 22px;
+font-weight: 700;
+}
+.login .login-form p{
+margin: 0 0 10px 0;
+text-align: left;
+color: #666666;
+font-size: 15px;
+}
+.login .login-form p:last-child{
+margin: 0;
+padding-top: 3px;
+}
+.login .login-form p a{
+color: #2aa15f;
+font-size: 14px;
+text-decoration: none;
+}
+.login .login-form label {
+display: block;
+width: 100%;
+margin-bottom: 2px;
+letter-spacing: .5px;
+}
+.login .login-form p:last-child label{
+width: 60%;
+float: left;
+}
+.login .login-form label span{
+color: #ff574e;
+padding-left: 2px;
+}
+.login .login-form input{
+display: block;
+width: 100%;
+height: 35px;
+padding: 0 10px;
+outline: none;
+border: 1px solid #cccccc;
+border-radius: 30px;
+}
+.login .login-form input:focus{
+border-color: #ff574e;
+}
+.login .login-form button,
+.login .login-form input[type=submit] {
+display: inline-block;
+width: 100%;
+margin-top: 5px;
+color: #FF5D5D;
+font-size: 16px;
+letter-spacing: 1px;
+cursor: pointer;
+background: transparent;
+border: 1px solid #FF5D5D;
+border-radius: 30px;
+box-shadow: inset 0 0 0 0 #FF5D5D;
+transition: .3s;
+}
+.login .login-form button:hover,
+.login .login-form input[type=submit]:hover{
+color: #ffffff;
+box-shadow: inset 250px 0 0 0 #FF5D5D;
+}
+
+      
+    </style>
+    <title>Beranda</title>
+  </head>
+  <body>
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <a class="navbar-brand" href="#" style="font-family: calibri;">Sasapu<i class="bi bi-info-circle-fill"></i><b >News</b></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="index.html">Beranda <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-expanded="false">
+                            Berita
+                          </button>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="index2.html">Ekonomi</a>
+                        <a class="dropdown-item" href="index3.html">Internasioanl</a>
+                        <a class="dropdown-item" href="index4.html">Olahraga</a>
+                        <a class="dropdown-item" href="index5.html">Politik</a>
+                    </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
+                    <ul class="navbar-nav mr-auto">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item active">
+                        <!-- Button trigger modal -->
+                      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                        LOGIN
+                      </button>
+                      </li>
+                    </ul>
+                  </form>
+                </div>
+              </nav>
+        </div>
+
+                <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Mohon Login Untuk Masuk</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="wrapper login">
+        <div class="container-modal">
+            <div class="col-left">
+                <div class="login-text">
+                    <p>Login Akun dan Berikan Komentar Panasmu !<br></p>
+                </div>
+            </div>
+
+            <div class="col-right">
+                <div class="login-form">
+                    <form action="">
+                        <p>
+                            <label>Username<span>*</span></label>
+                            <input type="text" id="us" placeholder="Username" required>
+                        </p>
+                        <p>
+                            <label>Password<span>*</span></label>
+                            <input type="password" id="pw" placeholder="Password" required>
+                        </p>
+                        <div class="form-group">
+                          </div>
+                        <div class="form-group custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+                            <label class="custom-control-label" for="customControlAutosizing">Remember me</label>
+                          </div>
+                        
+                    </form>
+                    <p>
+                        <input type="submit" value="Login" onclick="validasilogin()">
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+    </header>
+
+    <!-- Awal Jumbotron-->
+    <section class="jumbotron-bg">
+        <div class="jumbotron warna-bg ">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-6">
+                  <h1 class="display-4" style="font-family: calibri;">Sasapu<i class="bi bi-info-circle-fill"></i><b>News</h1>
+                    <p class="lead" style="color: white;">Temukan dan baca berita menarik yang selalu update setiap harinya . Tidak hanya kabar dari dalam negri , berita terhangat mancanegara pun bisa kamu simak disini.</p>
+                </div>
+                <div class="col-sm-6">
+                 
+                </div>
+              </div>
+            
+            </div>
+          </div>
+    </section>
+    <!-- Akhir Jumbotron-->
+
+    <!-- Awal Berita -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 mb-2">
+            <div class="card">
+              <img src="ekonomi.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h6 class="card-title">Ekonomi</h6>
+                <h6 class="card-text"> <a href="webekonomi.html" class="text-dark" > Pemerintah Larang Ekspor Litsrik, Bahlil: Sebentar Lagi akan Dibuat Aturannya</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-2">
+            <div class="card">
+              <img src="ekonomi2.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h6 class="card-title">Ekonomi</h6>
+                <h6 class="card-text"> <a href="webekonomi2.html" class="text-dark"> Promosikan Forum B20 Indonesia ke Eropa, KADIN Dorong Kolaborasi demi Transformasi Ekonomi Global</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-2">
+            <div class="card">
+              <img src="internasioanl2.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h6 class="card-title">Internasional</h6>
+                <h6 class="card-text"> <a href="webinternasioanl.html" class="text-dark">Zelensky Ngotot Ingin Ketemu Putin: Hanya Dia yang Bisa Setop Invasi</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-2">
+            <div class="card">
+              <img src="internasional.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h6 class="card-title">Internasioanl</h6>
+                <h6 class="card-text"> <a href="webinternasional2.html" class="text-dark">Bendera Setengah Tiang di Gedung Putih Usai Penembakan SD Texas</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-2">
+            <div class="card">
+              <img src="olahraga.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h6 class="card-title">Olahraga</h6>
+                <h6 class="card-text"> <a href="webolahraga.html" class="text-dark"> Atlet Negara Tetangga Tergiur dengan Bonus yang Diterima Peraih Medali Indonesia di SEA Games</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-2">
+            <div class="card">
+              <img src="olahraga2.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h6 class="card-title">Olahraga</h6>
+                <h6 class="card-text"> <a href="webolahraga2.html" class="text-dark"> Erik Ten Hag Copot Jabatan Kapten Manchester United dari Harry Maguire?</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-2">
+            <div class="card">
+              <img src="politik.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h6 class="card-title">Politik</h6>
+                <h6 class="card-text"> <a href="webpolitik.html" class="text-dark"> Isyarat Dukungan Jokowi ke Ganjar, PDIP: Pencalonan oleh Parpol</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-2">
+            <div class="card">
+              <img src="politik2.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h6 class="card-title">Politik</h6>
+                <h6 class="card-text"> <a href="webpolitik2.html" class="text-dark"> 6 Partai Baru yang Bakal Bertarung di Pemilu 2024: Wajah Baru, Orang Lama</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Akhir Berita-->
+
+    <!-- Awal Halaman Selanjutnya-->
+    <nav aria-label="Page navigation example">
+      <ul class="pagination  justify-content-center">
+        <li class="page-item"><a class="page-link" href="#" style="font-family: candara;">Sebelumnya</a></li>
+        <li class="page-item"><a class="page-link" href="#" style="font-family: calibri;">1</a></li>
+        <li class="page-item"><a class="page-link" href="#" style="font-family: clibri;">2</a></li>
+        <li class="page-item"><a class="page-link" href="#" style="font-family: candara;">Selanjutnya</a></li>
+      </ul>
+    </nav>
+    <!-- Akhir Halaman Selanjutnya-->
+
+   <!-- Awal Footer -->
+   <footer class="warna-bg">
+    <div class="text-white text-center pt-3 pb-3">
+      Copyright @2022 - Sasapu<i class="bi bi-info-circle-fill"></i><b >News
+    </div>
+    </footer>
+  <!-- Akhir Footer -->
+    <script>
+      function validasilogin(){
+         var us = document.getElementById("us").value;
+         var pw = document.getElementById("pw").value;
+         if (us == "Sandy" &&  pw == "saputra"){
+             alert("Selamat Login Berhasil")
+             alert("Selamat Datang " + us)
+             window.location="./index.html"
+         } else if (us == "" && pw == "") {
+             alert("Harap data forum tidak boleh dikosongkan !")
+         } else {
+             alert("Mohon Untuk mengisi data dengan benar !")
+         }
+      }
+   </script>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

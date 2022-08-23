@@ -1,0 +1,11 @@
+.warna-bg{
+    background: linear-gradient(to right, rgb(243, 36, 36), rgb(242, 40, 56));
+}
+.jumbotron-bg{
+    background-size: cover;
+    background: url(../gambar/bg.jpg);
+    background-size: 300px;
+}
+.card-body{
+    color: black;
+}
